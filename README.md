@@ -3,4 +3,4 @@ That's what it is.
 
 Yeah.
 
-(not finished right now, still have to add more textures and movement and stuff)
+You can play it [here](https://mrfish486.github.io/2048/)
