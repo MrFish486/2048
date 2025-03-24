@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50"
+   height="50"
+   viewBox="0 0 13.229167 13.229167"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (1:1.4+202410161351+e7c3feb100)"
+   sodipodi:docname="16.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="16"
+     inkscape:cx="22.40625"
+     inkscape:cy="30.65625"
+     inkscape:window-width="1920"
+     inkscape:window-height="1043"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="0.26458335"
+       spacingy="0.26458335"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#3771c8;stroke:none;stroke-width:1;stroke-linecap:square;fill-opacity:1;stroke-opacity:1"
+       id="rect1"
+       width="13.229166"
+       height="13.229166"
+       x="0"
+       y="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square"
+       d="m 3.7041668,2.3812498 c 0.1603825,3.8933232 0.032039,5.1009838 0,8.9958342"
+       id="path1"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.12217;stroke-linecap:square"
+       d="M 9.260417,2.3812498 C 8.2121191,4.2760426 7.672917,5.71304 7.0172018,7.5342799 6.3528105,9.3796177 6.3500002,11.377084 8.2020836,11.377084 c 2.9104164,0 2.1166664,-3.3317909 -0.2645833,-4.3313279"
+       id="path2"
+       sodipodi:nodetypes="cssc" />
+  </g>
+</svg>
