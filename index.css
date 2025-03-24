@@ -21,6 +21,12 @@ a {
 ._slam {
 	animation: 0.25s linear 0s slam;
 }
+._shake {
+	animation: 0.125s linear 0s shake;
+}
+._shake.addedclass {
+	display: block;
+}
 @keyframes slam {
 	0% {
 		font-size: 25px;
@@ -36,5 +42,24 @@ a {
 	}
 	40% {
 		rotate: 2deg;
+	}
+}
+@keyframes shake {
+	0% {
+		transform: translateX(0px);
+		transform: skewY(2deg);
+	}
+	25% {
+		transform: translateX(-3px);
+	}
+	50% {
+		transform: translateX(3px);
+	}
+	75% {
+		transform: translateX(-3px);
+		transform: skewY(-2deg);
+	}
+	100% {
+		transform: translateX(0px);
 	}
 }

@@ -14,7 +14,7 @@ setInterval(()=>{
 	if(game.haswon()){
 		document.getElementById("status").innerHTML = "You won!";
 	}else if(game.haslost()){
-		document.getElementById("status").innerHTML = "You lost!";
+		document.getElementById("status").innerHTML = "You lost! (Score : " + score + ")";
 		game.render(document.getElementById("main"), true);
 	}else{
 		document.getElementById("status").innerHTML = "Score : " + score;
@@ -30,6 +30,8 @@ game.onmerge = (x, y)=>{
 	score += game.whatis(x, y) * 2;
 	document.getElementById("status").classList.add("_slam");
 	setTimeout(()=>{document.getElementById("status").classList.remove("_slam")}, 251);
+	document.getElementById("main").classList.add("_shake");
+	setTimeout(()=>{document.getElementById("main").classList.remove("_shake")}, 126);
 }
 
 document.addEventListener("keydown", e=>{
