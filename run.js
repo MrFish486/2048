@@ -10,14 +10,22 @@ var empty = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
 
 var game = new board(JSON.parse(JSON.stringify(empty)), defaults);
 
+localStorage["h"] = localStorage["h"] || 0;
+
 setInterval(()=>{
 	if(game.haswon()){
 		document.getElementById("status").innerHTML = "You won!";
+		document.getElementById("score").innerHTML = "High score : " + localStorage["h"];
 	}else if(game.haslost()){
 		document.getElementById("status").innerHTML = "You lost! (Score : " + score + ")";
+		document.getElementById("score").innerHTML = "High score : " + localStorage["h"];
 		game.render(document.getElementById("main"), true);
 	}else{
 		document.getElementById("status").innerHTML = "Score : " + score;
+		document.getElementById("score").innerHTML = "High score : " + localStorage["h"];
+		if(score > Number(localStorage["h"])){
+			localStorage["h"] = score;
+		}
 	}
 }, 50);
 
