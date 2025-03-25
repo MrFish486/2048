@@ -47,7 +47,7 @@ a {
 @keyframes shake {
 	0% {
 		transform: translateX(0px);
-		transform: skewY(2deg);
+		transform: skewY(1deg);
 	}
 	25% {
 		transform: translateX(-3px);
@@ -57,7 +57,7 @@ a {
 	}
 	75% {
 		transform: translateX(-3px);
-		transform: skewY(-2deg);
+		transform: skewY(-1deg);
 	}
 	100% {
 		transform: translateX(0px);
