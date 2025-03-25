@@ -10,13 +10,28 @@ var empty = [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]];
 
 var game = new board(JSON.parse(JSON.stringify(empty)), defaults);
 
+var time = 0;
+
+var go = false;
+
+document.onkeydown = e=>{
+	e = e || window.event;
+	if(e.keyCode >=37 && e.keyCode <= 40 || e.keyCode == 32){
+		return false;
+	}
+}
+
 localStorage["h"] = localStorage["h"] || 0;
 
+going = setInterval(()=>{if(go){time += 0.1}}, 100);
+
 setInterval(()=>{
+	document.getElementById("timer").innerHTML = "Time : " + (Math.round(time * 10) / 10);
 	if(game.haswon()){
 		document.getElementById("status").innerHTML = "You won!";
 		document.getElementById("score").innerHTML = "High score : " + localStorage["h"];
 	}else if(game.haslost()){
+		clearInterval(going);
 		document.getElementById("status").innerHTML = "You lost! (Score : " + score + ")";
 		document.getElementById("score").innerHTML = "High score : " + localStorage["h"];
 		game.render(document.getElementById("main"), true, true);
@@ -44,6 +59,7 @@ game.onmerge = (x, y)=>{
 document.addEventListener("keydown", e=>{
 	switch(e.code){
 		case "ArrowUp":
+			go = true;
 			game.go("u");
 			game.merge("u");
 			game.go("u");
@@ -51,6 +67,7 @@ document.addEventListener("keydown", e=>{
 			game.render(document.getElementById("main"), game.haslost(), game.haslost());
 			break;
 		case "ArrowDown":
+			go = true;
 			game.go("d");
 			game.merge("d");
 			game.go("d");
@@ -58,6 +75,7 @@ document.addEventListener("keydown", e=>{
 			game.render(document.getElementById("main"), game.haslost(), game.haslost());
 			break;
 		case "ArrowLeft":
+			go = true;
 			game.go("l");
 			game.merge("l");
 			game.go("l");
@@ -65,6 +83,7 @@ document.addEventListener("keydown", e=>{
 			game.render(document.getElementById("main"), game.haslost(), game.haslost());
 			break;
 		case "ArrowRight":
+			go = true;
 			game.go("r");
 			game.merge("r");
 			game.go("r");
