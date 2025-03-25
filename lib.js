@@ -15,7 +15,8 @@ class board {
 	set(x, y, val){
 		return this.board[x][y] = val;
 	}
-	render(canvas, grayscale){
+	render(canvas, grayscale, cracked){
+		cracked = cracked || false;
 		let c = canvas.getContext("2d");
 		if(grayscale){
 			c.filter = "grayscale(1)";
@@ -26,8 +27,12 @@ class board {
 		for(let x = 0; x < this.size.x; x++){
 			for(let y = 0; y < this.size.y; y++){
 				c.drawImage(this.cache[this.whatis(x, y)], y * ys, x * xs, ys, xs);
-				//console.log(this.cache[this.whatis(x, y)], this.whatis(x, y), x, y, xs, ys);
 			}
+		}
+		if(cracked){
+			let q = new Image();
+			q.src = "./img/end.png"
+			c.drawImage(q, 0, 0, canvas.height, canvas.width);
 		}
 	}
 	salt(){

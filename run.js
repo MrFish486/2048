@@ -19,7 +19,7 @@ setInterval(()=>{
 	}else if(game.haslost()){
 		document.getElementById("status").innerHTML = "You lost! (Score : " + score + ")";
 		document.getElementById("score").innerHTML = "High score : " + localStorage["h"];
-		game.render(document.getElementById("main"), true);
+		game.render(document.getElementById("main"), true, true);
 	}else{
 		document.getElementById("status").innerHTML = "Score : " + score;
 		document.getElementById("score").innerHTML = "High score : " + localStorage["h"];
@@ -31,7 +31,6 @@ setInterval(()=>{
 
 game.salt();
 game.salt();
-setTimeout(()=>{game.render(document.getElementById("main"))}, 50);
 var score = 0;
 
 game.onmerge = (x, y)=>{
@@ -49,28 +48,28 @@ document.addEventListener("keydown", e=>{
 			game.merge("u");
 			game.go("u");
 			game.salt();
-			game.render(document.getElementById("main"), game.haslost());
+			game.render(document.getElementById("main"), game.haslost(), game.haslost());
 			break;
 		case "ArrowDown":
 			game.go("d");
 			game.merge("d");
 			game.go("d");
 			game.salt();
-			game.render(document.getElementById("main")), game.haslost();
+			game.render(document.getElementById("main"), game.haslost(), game.haslost());
 			break;
 		case "ArrowLeft":
 			game.go("l");
 			game.merge("l");
 			game.go("l");
 			game.salt();
-			game.render(document.getElementById("main")), game.haslost();
+			game.render(document.getElementById("main"), game.haslost(), game.haslost());
 			break;
 		case "ArrowRight":
 			game.go("r");
 			game.merge("r");
 			game.go("r");
 			game.salt();
-			game.render(document.getElementById("main")), game.haslost();
+			game.render(document.getElementById("main"), game.haslost(), game.haslost());
 			break;
 		default:
 			break;
