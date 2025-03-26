@@ -48,7 +48,12 @@ game.salt();
 game.salt();
 var score = 0;
 
+var w = setInterval(()=>{if(game.haslost()){clearInterval(w);new Audio("./sfx/bad.wav").play()}},50);
+
 game.onmerge = (x, y)=>{
+	let e = new Audio("./sfx/good.wav");
+	e.volume = 0.2;
+	e.play();
 	score += game.whatis(x, y) * 2;
 	document.getElementById("status").classList.add("_slam");
 	setTimeout(()=>{document.getElementById("status").classList.remove("_slam")}, 251);
